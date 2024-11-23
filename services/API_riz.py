@@ -14,7 +14,7 @@ torch.serialization.add_safe_globals([ResNet])
 app = FastAPI()
 
 # Charger le modèle avec le mappage vers le CPU
-model = torch.load('C:/Users/NIKIEMA Francklin/OneDrive - ESMT/Bureau/Projet_Databeez/Détection Maladies des plantes/services/get_resnext101_weighted.pth', map_location=torch.device('cpu'), weights_only=False)
+model = torch.load('C:/Users/NIKIEMA Francklin/OneDrive - ESMT/Bureau/Projet_Databeez/Projet Détection Maladies plantes/services/get_resnext101_weighted.pth', map_location=torch.device('cpu'), weights_only=False)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 model.eval()

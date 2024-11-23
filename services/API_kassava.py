@@ -10,7 +10,7 @@ import tensorflow as tf
 
 app = FastAPI()
 
-MODEL = tf.keras.models.load_model("C:/Users/NIKIEMA Francklin/OneDrive - ESMT/Bureau/Projet_Databeez/Détection Maladies des plantes/services/saved_models/version_1.keras")
+MODEL = tf.keras.models.load_model("C:/Users/NIKIEMA Francklin/OneDrive - ESMT/Bureau/Projet_Databeez/Projet Détection Maladies plantes/services/saved_models/version_1.keras")
 
 CLASS_NAME = ['cbb', 'cbsd', 'cgm', 'cmd', 'healthy']
 @app.get('/')

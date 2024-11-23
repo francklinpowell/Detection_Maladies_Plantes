@@ -73,6 +73,15 @@ else:
             """
         )
 
+        # Dictionnaire des descriptions des maladies
+        cassava_disease_descriptions = {
+                "cbb": "Cassava Bacterial Blight : Cette maladie est causée par des bactéries qui infectent les feuilles et les tiges, provoquant des taches sombres et une défoliation.",
+                "cbsd": "Cassava Brown Streak Disease : Cette maladie provoque des nécroses sur les racines, entraînant une réduction des rendements.",
+                "cgm": "Cassava Green Mite : Infestation par des acariens verts qui causent le jaunissement et la chute des feuilles.",
+                "cmd": "Cassava Mosaic Disease : Cette maladie est causée par des virus transmis par des mouches blanches, entraînant des feuilles déformées et une réduction des rendements.",
+                "healthy": "La plante est en bonne santé. Aucun traitement n'est nécessaire."
+        }
+
     # Page d'analyse pour le manioc
     elif page == "Analyse de Manioc":
         st.title("🌿 Analyse de Maladies du Manioc")
@@ -116,6 +125,18 @@ else:
                                 st.error(
                                     f"❌ Maladie détectée: **{class_predict}** (Confiance: {prob}%)."
                                 )
+
+                            cassava_disease_descriptions = {
+                                    "cbb": "Cassava Bacterial Blight : Cette maladie est causée par des bactéries qui infectent les feuilles et les tiges, provoquant des taches sombres et une défoliation.",
+                                    "cbsd": "Cassava Brown Streak Disease : Cette maladie provoque des nécroses sur les racines, entraînant une réduction des rendements.",
+                                    "cgm": "Cassava Green Mite : Infestation par des acariens verts qui causent le jaunissement et la chute des feuilles.",
+                                    "cmd": "Cassava Mosaic Disease : Cette maladie est causée par des virus transmis par des mouches blanches, entraînant des feuilles déformées et une réduction des rendements.",
+                                    "healthy": "La plante est en bonne santé. Aucun traitement n'est nécessaire."
+                            }
+
+                                    # Afficher la description
+                            description = cassava_disease_descriptions.get(class_predict, "Aucune description disponible pour cette maladie.")
+                            st.info(f"📄 *Description :* {description}")
                         else:
                             st.error("❌ Erreur avec l'API : Analyse non réussie.")
             except Exception as e:
@@ -169,6 +190,17 @@ else:
                                 st.error(
                                     f"❌ Maladie détectée: **{predicted_label}** (Confiance: {confidence}%)."
                                 )
+                                                # Dictionnaire des descriptions des maladies
+                                rice_disease_descriptions = {
+                                    "Blast": "La maladie du blast est causée par un champignon qui attaque les feuilles, les tiges et les grains, entraînant une réduction significative des rendements.",
+                                    "Brown Spot": "La maladie des taches brunes est causée par des conditions environnementales défavorables et des champignons, affectant principalement les feuilles.",
+                                    "Healthy": "La plante est en bonne santé. Aucun traitement n'est nécessaire."
+                                }
+
+
+                                    # Afficher la description
+                            description = rice_disease_descriptions.get(predicted_label, "Aucune description disponible pour cette maladie.")
+                            st.info(f"📄 *Description :* {description}")
 
                         else:
                             st.error("❌ Erreur avec l'API.")
