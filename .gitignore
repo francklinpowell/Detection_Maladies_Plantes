@@ -1,1 +1,65 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyInstaller
+*.spec
+
+# Logs and temporary files
+*.log
+*.temp
+*.tmp
+
+# Distribution/packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Ignored project directories
+/assets/
+data/
+services/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# Secrets and sensitive files
+*.crt
+*.key
+pip.conf
+openrc.sh
+
+# Miscellaneous
+.DS_Store
+*.zip
+*.joblib
+*.csv
+*.png
+*.jpg
+*.jpeg
 services/get_resnext101_weighted.pth
