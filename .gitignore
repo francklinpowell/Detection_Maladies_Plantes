@@ -62,4 +62,5 @@ openrc.sh
 *.png
 *.jpg
 *.jpeg
-services/get_resnext101_weighted.pth
+!services/get_resnext101_weighted.pth
+
